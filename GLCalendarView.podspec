@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GLCalendarView"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Fully customizable date range picker"
   s.homepage     = "https://github.com/Glow-Inc/GLCalendarView"
   s.license      = "MIT"
