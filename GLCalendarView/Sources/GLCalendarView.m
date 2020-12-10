@@ -139,6 +139,12 @@ static NSString * const CELL_REUSE_IDENTIFIER = @"DayCell";
     self.weekDayTitleAttributes = appearance.weekDayTitleAttributes ?: @{NSFontAttributeName:[UIFont systemFontOfSize:8], NSForegroundColorAttributeName:[UIColor grayColor]};
     self.monthCoverAttributes = appearance.monthCoverAttributes ?: @{NSFontAttributeName:[UIFont systemFontOfSize:30]};
     self.monthCoverView.textAttributes = self.monthCoverAttributes;
+ 
+    // Before 13 there is no darkmode, so there is no else
+    if (@available(iOS 13, *)) {
+        self.weekDayTitle.backgroundColor = [UIColor secondarySystemBackgroundColor];
+        self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
+    }
 }
 
 #pragma mark - public api
